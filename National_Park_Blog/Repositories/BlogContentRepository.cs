@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace National_Park_Blog.Repositories
 {
-    public class Class
+    public class BlogContentRepository
     {
+
+
     }
 }
