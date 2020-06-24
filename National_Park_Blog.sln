@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "National_Park_Blog", "National_Park_Blog\National_Park_Blog.csproj", "{F684064A-33E8-44B9-AC47-CB77B7077281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "National_Park_Blog", "National_Park_Blog\National_Park_Blog.csproj", "{F684064A-33E8-44B9-AC47-CB77B7077281}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "National_Park_Blog.Tests", "National_Park_Blog.Tests\National_Park_Blog.Tests.csproj", "{FAA62E4C-5440-4889-8D49-E07631D1BDC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F684064A-33E8-44B9-AC47-CB77B7077281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F684064A-33E8-44B9-AC47-CB77B7077281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F684064A-33E8-44B9-AC47-CB77B7077281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA62E4C-5440-4889-8D49-E07631D1BDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA62E4C-5440-4889-8D49-E07631D1BDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA62E4C-5440-4889-8D49-E07631D1BDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA62E4C-5440-4889-8D49-E07631D1BDC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
