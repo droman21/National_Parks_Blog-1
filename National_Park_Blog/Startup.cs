@@ -25,7 +25,7 @@ namespace National_Park_Blog
         {
             services.AddMvc();
             services.AddDbContext<NationalParkContext>();
-            services.AddScoped<IRepository<National_Parks>, NationalParkRepository>();
+            services.AddScoped<IRepository<Blog_Content>, BlogContentRepository>();
 
         }
 

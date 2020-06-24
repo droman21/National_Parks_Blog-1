@@ -26,5 +26,20 @@ namespace National_Park_Blog.Controllers
             var model = this.natRepo.GetById(id);
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(National_Parks nationalPark)
+        {
+            if (ModelState.IsValid)
+            {
+                natRepo.Create(nationalPark);
+                return RedirectToAction("Index");
+            }
+            return View(nationalPark);
+        }
     }
 }
