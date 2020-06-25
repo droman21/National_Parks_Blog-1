@@ -14,7 +14,7 @@ namespace National_Park_Blog.Models
         public string Image { get; set; }
         public string Location { get; set; }
 
-        //public virtual ICollection<Blog_Content> Blog Content {get; set;}
+        public virtual ICollection<Blog_Content> BlogContent { get; set; }
 
         public National_Parks()
         {
@@ -28,6 +28,6 @@ namespace National_Park_Blog.Models
             Image = image;
             Location = location;
         }
-
     }
 }
+

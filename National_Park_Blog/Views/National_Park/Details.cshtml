@@ -1,4 +1,4 @@
-﻿
+﻿@model National_Park_Blog.Models.National_Parks
 @{
     Layout = null;
 }
@@ -9,7 +9,23 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <link href="/CSS/site.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="Details_Section">
+         <article class="some_details_name">
+             <h1>National Park Details</h1>
+             <p>National Park Name: <span>@Model.Name</span></p>
+             <p>National Park Description: <span>@Model.Description</span></p>
+             @foreach (var blogContent in Model.BlogContent)
+             {
+                 <p>Blog Content: <span><a href="/Blog_Content/@blogContent.Id">@blogContent.BlogContentText</a></span></p>
+                 <p>Blog Content Name: <span>@blogContent.BlogContentName</span></p>
+             }
+             <hr />
+             <p><a href="/Blog_Content/CreateByNationalParkId/@Model.Id">Add New Blog Content</a></p>
+             <p><a href="/National_Park/Index">Return to All Blogs Page</a></p>
+         </article>
+    </div>
 </body>
 </html>

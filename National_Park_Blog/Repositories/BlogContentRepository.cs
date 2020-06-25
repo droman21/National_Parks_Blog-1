@@ -46,7 +46,6 @@ namespace National_Park_Blog.Repositories
             {
                 throw new NotImplementedException();
             }
-
             Blog_Content IRepository<Blog_Content>.GetById(int id)
             {
                 throw new NotImplementedException();
