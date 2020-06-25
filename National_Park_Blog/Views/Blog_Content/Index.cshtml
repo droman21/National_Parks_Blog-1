@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<National_Park_Blog.Models.Blog_Content>
 @{
     Layout = null;
 }
@@ -9,7 +9,24 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
 </head>
 <body>
+    <h1>Blog Entries</h1>
+    <section>
+        <div> id="posts">
+
+
+            @foreach (var blogContent in Model)
+            {
+                <article>
+                    <h2>@blogContent.BlogContentName</h2>
+                    <p>@blogContent.BlogContentText</p>
+                    <p>@blogContent.BlogContentDate</p>
+                    <a href="National_Park/Details/@blogContent.Id">Return to the main listing</a>
+                </article>
+            }
+        </div>
+    </section>
 </body>
 </html>

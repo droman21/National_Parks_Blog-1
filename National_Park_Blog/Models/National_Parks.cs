@@ -12,6 +12,7 @@ namespace National_Park_Blog.Models
         public int Id { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
+        public string Location { get; set; }
 
         //public virtual ICollection<Blog_Content> Blog Content {get; set;}
 
@@ -19,12 +20,13 @@ namespace National_Park_Blog.Models
         {
 
         }
-        public National_Parks(string name, int id, string description, string image)
+        public National_Parks(string name, int id, string description, string image, string location)
         {
             Name = name;
             Id = id;
             Description = description;
             Image = image;
+            Location = location;
         }
 
     }

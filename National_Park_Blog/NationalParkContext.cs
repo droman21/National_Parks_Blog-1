@@ -24,23 +24,23 @@ namespace National_Park_Blog
         }
         protected override void OnModelCreating(ModelBuilder modelbuilder)
         {
-            //modelbuilder.Entity<National_Parks>().HasData(
+            modelbuilder.Entity<National_Parks>().HasData(
+     
 
+            new National_Parks("Black River Reservation", 1, "Impressive park, a natural beauty", "/images/Black_River_Reservation.jpg", "Ohio"),
+            new National_Parks("Gallatin National Park", 2, "Gateway to Yellowstone National Park", "/images/Gallatin_Sign.jpg", "Montana"),
+            new National_Parks("Glacier National Park", 3, "The Crown of the Continent", "Glacier_Park_Sign.jpg", "Montana"),
+            new National_Parks("Rocky River Reservation", 4, "Totally Safe", "Rocky_River_Park.jpg", "Ohio")
 
-            //   new GolfCourse("Bushwood CC", 1, "Good snack shack and poor caddying", "Bushwood.jpg", "18Hole"),
-            //   new GolfCourse("Fury Creek Golf CC", 2, "Price is wrong B&$#%", "FurryCreek.jpg", "PuttPutt"),
-            //   new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat", "Cottonwood.jpg", "9Hole"),
-            //   new GolfCourse("Little Met", 4, "Great course for beginners, not so much for the advanced player", "golfcouse5.jpg", "Par3")
+               );
 
-            //   );
+            modelbuilder.Entity<Blog_Content>().HasData(
 
-            //modelbuilder.Entity<Blog_Content>().HasData(
-
-            //   new Review("Ron", 1, "I played bad. This course sucks.", "06-18-2020", 1, 1),
-            //   new Review("Dan", 2, "I played good. This course is awesome.", "06-18-2020", 2, 1),
-            //   new Review("Chuck", 3, "I'm a pro, and wouldn't play a crappy course like this.", "06-18-2020", 3, 2),
-            //   new Review("Tom", 4, "I forgot my clubs and didn't actually play.", "06-18-2020", 4, 1)
-            //   );
+            new Blog_Content("Ron", 1, "Not too far away, very relaxing, great park.", "06-18-2020", 1),
+            new Blog_Content("Dan", 2, "Totally awesome, once in a lifetime experience", "06-18-2020", 2),
+            new Blog_Content("Chuck", 3, "Ran into many blockers during the trip, a bear raided my campsite", "06-18-2020", 3),
+            new Blog_Content("Tom", 4, "I became one with Nature, 10/10 would recommend", "06-18-2020", 4)
+               );
 
 
         }
