@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 using Microsoft.Extensions.Hosting;
 using National_Park_Blog.Models;
 using National_Park_Blog.Repositories;
@@ -25,6 +26,7 @@ namespace National_Park_Blog
             services.AddMvc();
             services.AddDbContext<NationalParkContext>();
             services.AddScoped<IRepository<Blog_Content>,BlogContentRepository>();
+            services.AddScoped<IRepository<National_Parks>,NationalParkRepository>();
 
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -47,8 +49,11 @@ namespace National_Park_Blog
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(endpoints => 
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=NationalParks}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

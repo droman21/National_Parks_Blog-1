@@ -15,7 +15,7 @@ namespace National_Park_Blog
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=GolfCourseDatabase;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=NationalParkDatabase;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();
@@ -26,11 +26,10 @@ namespace National_Park_Blog
         {
             modelbuilder.Entity<National_Parks>().HasData(
      
-
-            new National_Parks("Black River Reservation", 1, "Impressive park, a natural beauty", "/images/Black_River_Reservation.jpg", "Ohio"),
-            new National_Parks("Gallatin National Park", 2, "Gateway to Yellowstone National Park", "/images/Gallatin_Sign.jpg", "Montana"),
-            new National_Parks("Glacier National Park", 3, "The Crown of the Continent", "Glacier_Park_Sign.jpg", "Montana"),
-            new National_Parks("Rocky River Reservation", 4, "Totally Safe", "Rocky_River_Park.jpg", "Ohio")
+            new National_Parks("Black River Reservation", 1, "Impressive park, a natural beauty", "/Images/Black_River_Reservation.jpg", "Ohio"),
+            new National_Parks("Gallatin National Park", 2, "Gateway to Yellowstone National Park", "/Images/Gallatin_Sign.jpg", "Montana"),
+            new National_Parks("Glacier National Park", 3, "The Crown of the Continent", "/Images/Glacier_Park_Sign.jpg", "Montana"),
+            new National_Parks("Rocky River Reservation", 4, "Totally Safe", "/Images/Rocky_River_Park.jpg", "Ohio")
 
                );
 
