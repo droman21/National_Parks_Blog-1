@@ -10,7 +10,12 @@ namespace National_Park_Blog.Repositories
 {
     public class NationalParkRepository : IRepository<National_Parks>
     {
-        public void Create(National_Park obj)
+        private NationalParkContext db;
+        public NationalParkRepository(NationalParkContext db)
+        {
+            this.db = db;
+        }
+        public void Create(National_Parks obj)
         {
             throw new NotImplementedException();
         }
@@ -22,7 +27,7 @@ namespace National_Park_Blog.Repositories
 
         public IEnumerable<National_Parks> GetAll()
         {
-            return .Nat;
+            return db.NationalParks;
         }
 
         public National_Parks GetById(int id)

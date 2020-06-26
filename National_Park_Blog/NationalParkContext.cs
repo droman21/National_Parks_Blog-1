@@ -15,7 +15,7 @@ namespace National_Park_Blog
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=GolfCourseDatabase;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=NationalParkDatabase;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();

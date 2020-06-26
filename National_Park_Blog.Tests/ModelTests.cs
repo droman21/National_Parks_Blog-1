@@ -11,7 +11,7 @@ namespace National_Park_Blog.Tests
         
         public ModelTests()
         {
-            underTest = new National_Parks("Yellowstone", 1, "The best park", "");
+            underTest = new National_Parks("Yellowstone", 1, "The best park", "", "Wyoming");
         }
         [Fact]
         public void Get_Name_Returns_Name()
