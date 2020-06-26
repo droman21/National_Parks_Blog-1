@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using National_Park_Blog.Models;
-//using National_Park_Blog.Repositories;
+using National_Park_Blog.Repositories;
 
 namespace National_Park_Blog
 {
@@ -19,19 +19,14 @@ namespace National_Park_Blog
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddDbContext<>();
-            //services.AddScoped<IRepository<Blog_Content>, BlogContentRepository>();
+            services.AddDbContext<NationalParkContext>();
+            services.AddScoped<IRepository<Blog_Content>,BlogContentRepository>();
 
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

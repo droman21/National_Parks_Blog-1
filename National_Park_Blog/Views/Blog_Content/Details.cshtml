@@ -1,0 +1,29 @@
+﻿@model National_Park_Blog.Models.Blog_Content
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+<body>
+    <h1>Blog Entries</h1>
+
+    <div id="blogEntriesPage">
+
+        <h2>@Model.NationalParkId</h2>
+
+
+        <p>@Model.Id @Model.BlogContentName</p>
+        <p>@Model.BlogContentText</p>
+        <p>@Model.BlogContentDate</p>
+
+        <a href="National_Park/Details/@blogContent.Id">Return to the main listing</a>
+    </div>
+</body>
+</html>

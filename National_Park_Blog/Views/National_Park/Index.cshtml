@@ -1,0 +1,27 @@
+﻿@model IEnumerable<National_Park_Blog.Models.National_Parks>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>National Parks</title>
+    <link href="~/CSS/site.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Get Out There! - An Adventure Blog</h1>
+    <p>Checkout what makes America's National Parks great. Checkout the blogs below or add your own content.</p>
+    <div id="Blog_Content_Section">
+        @foreach (var nationalPark in Model)
+        {
+            <article class="someName">
+                <h3><a href="/National_Park/Details/@nationalPark.Id">@nationalPark.Name</a></h3>
+                <img src="~/Images/@nationalPark.Image" alt="image# @nationalPark.Id" />
+            </article>
+        }
+    </div>
+</body>
+</html>
