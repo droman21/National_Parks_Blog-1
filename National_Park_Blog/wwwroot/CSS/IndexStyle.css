@@ -4,3 +4,21 @@
     background-image: url(/Images/Park_Background.png);
     background-size: cover;
 }
+#Blog_Content_Section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#Blog_Content_Section article img {
+    width: 100%;
+    border: 1px solid #333;
+}
+#Blog_Content_Section article {
+    background-color: lightgray;
+    opacity: 0.7;
+    border: 2px solid #333;
+    padding: 1em;
+}
