@@ -1,0 +1,24 @@
+﻿body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-image: url(/Images/Background.jpg);
+    background-size: cover;
+}
+#Blog_Content_Section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#Blog_Content_Section article img {
+    width: 100%;
+    border: 1px solid #333;
+}
+#Blog_Content_Section article {
+    background-color: lightgray;
+    opacity: 0.9;
+    border: 2px solid #333;
+    padding: 1em;
+}

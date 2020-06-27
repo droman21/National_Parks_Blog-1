@@ -19,22 +19,18 @@ namespace National_Park_Blog.Repositories
         {
             throw new NotImplementedException();
         }
-
         public void Delete(Blog_Content blogContent)
         {
             throw new NotImplementedException();
         }
-
         public IEnumerable<National_Parks> GetAll()
         {
             return db.NationalParks.ToList();
         }
-
         public National_Parks GetById(int id)
         {
             throw new NotImplementedException();
         }
-
         public void Update(Blog_Content review)
         {
             throw new NotImplementedException();
