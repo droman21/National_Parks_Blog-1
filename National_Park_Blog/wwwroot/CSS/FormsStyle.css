@@ -1,2 +1,29 @@
 ﻿body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-image: url(/Images/Park_Background.png);
+    background-size: cover;
+}
+.FormsStyle {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    border: 2px solid #333;
+    text-align: left;
+    justify-content: center;
+    background-color: lightgray;
+    opacity: 0.7;
+    padding: 1em;
+    margin-left: 380px;
+    margin-right: 380px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.control-label {
+    opacity: 1;
+    color: black;
+    font-weight: bold;
+}
+.delete {
+    color: red;
 }
