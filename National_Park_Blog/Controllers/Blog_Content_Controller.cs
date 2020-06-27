@@ -32,7 +32,7 @@ namespace National_Park_Blog.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(Blog_Content blog_Content)
+        public Microsoft.AspNetCore.Mvc.ActionResult Create(Blog_Content blog_Content)
         {
             blog_Content.BlogContentDate = DateTime.Now;
 
@@ -44,9 +44,36 @@ namespace National_Park_Blog.Controllers
 
             return View(blog_Content);
         }
+        [HttpGet]
         public ViewResult Update()
         {
             return View();
+        }
+        [HttpPost]
+        public ViewResult Update(int id)
+        {
+            Blog_Content blog_Content = blogContentRepo.GetById(id);
+            blog_Content.BlogContentDate = DateTime.Now;
+            return View(blog_Content);
+        }
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Blog_Content blog_Content = blogContentRepo.GetById(id);
+            return View(blog_Content);
+        }
+        [HttpPost]
+        public ActionResult Delete(Blog_Content blog_Content)
+        {
+            if (ModelState.IsValid)
+            {
+                int Id = blog_Content.Id;
+
+                blogContentRepo.Delete(blog_Content);
+
+                return RedirectToAction("Details", "National_Parks", new { id = Id });
+            }
+            return View(blog_Content);
         }
     }
 }

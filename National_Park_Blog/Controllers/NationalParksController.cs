@@ -32,7 +32,7 @@ namespace National_Park_Blog.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(National_Parks nationalPark)
+        public Microsoft.AspNetCore.Mvc.ActionResult Create(National_Parks nationalPark)
         {
             if (ModelState.IsValid)
             {
