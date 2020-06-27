@@ -18,6 +18,7 @@
         @foreach (var nationalPark in Model)
         {
             <article class="someName">
+
                 <h3><a href="/NationalParks/Details/@nationalPark.Id">@nationalPark.Name</a></h3>
                 <img src="@nationalPark.Image" alt="image# @nationalPark.Id" />
                 <p>National Park Location: @nationalPark.Location</p>

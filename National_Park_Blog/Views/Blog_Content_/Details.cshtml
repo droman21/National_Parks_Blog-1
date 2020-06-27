@@ -23,7 +23,14 @@
         <p>@Model.BlogContentText</p>
         <p>@Model.BlogContentDate</p>
 
-        <a href="NationalParks/Details/@Model.Id">Return to the main listing</a>
+        <br />
+        <br />
+        <a href="/Blog_Content_/Update/@Model.Id">Edit review.</a>
+        <br />
+        <a href="/Blog_Content_/Delete/@Model.Id">Remove review.</a>
+        <br />
+        <a href="National_Park/Details/@Model.Id">Return to the main listing</a>
+
     </div>
 </body>
 </html>

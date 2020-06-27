@@ -1,5 +1,6 @@
 ﻿@model National_Park_Blog.Models.Blog_Content
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
     Layout = null;
 }
@@ -27,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="BlogContentText" class="control-label"></label>
-                <input asp-for="BlogContentText" class="form-control" size="100"/>
+                <input asp-for="BlogContentText" class="form-control" />
                 <span asp-validation-for="BlogContentText" class="text-danger"></span>
             </div>
             <div class="form-group">
