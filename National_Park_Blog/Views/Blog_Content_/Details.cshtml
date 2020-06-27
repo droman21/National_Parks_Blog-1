@@ -9,7 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
-    <link rel="stylesheet" type="text/css" href="~/CSS/DetailsStyles.css" />
+    <link href="/CSS/DetailsStyle.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Blog Entries</h1>
@@ -22,6 +22,7 @@
         <p>@Model.Id @Model.BlogContentName</p>
         <p>@Model.BlogContentText</p>
         <p>@Model.BlogContentDate</p>
+
         <br />
         <br />
         <a href="/Blog_Content_/Update/@Model.Id">Edit review.</a>
@@ -29,6 +30,7 @@
         <a href="/Blog_Content_/Delete/@Model.Id">Remove review.</a>
         <br />
         <a href="National_Park/Details/@Model.Id">Return to the main listing</a>
+
     </div>
 </body>
 </html>

@@ -4,4 +4,30 @@
     background-image: url(/Images/Park_Background.png);
     background-size: cover;
 }
-
+.headerinfo {
+    text-align: center;
+}
+#Details_Section {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    border: 2px solid #333;
+    text-align: left;
+    justify-content: center;
+    background-color: lightgray;
+    opacity: 0.7;
+    padding: 1em;
+    margin-left: 380px;
+    margin-right: 380px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.some_details_name {
+    text-align: center;
+    justify-content: center;
+    background-color: lightgray;
+    opacity: 0.7;
+    border: 2px solid #333;
+    padding: 1em;
+}
