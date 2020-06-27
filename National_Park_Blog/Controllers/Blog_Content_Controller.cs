@@ -26,5 +26,27 @@ namespace National_Park_Blog.Controllers
             var model = blogContentRepo.GetAll();
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Blog_Content blog_Content)
+        {
+            blog_Content.BlogContentDate = DateTime.Now;
+
+            if (ModelState.IsValid)
+            {
+                blogContentRepo.Create(blog_Content);
+                return RedirectToAction("Details", "National_Parks", new { id = blog_Content.Id });
+            }
+
+            return View(blog_Content);
+        }
+        public ViewResult Update()
+        {
+            return View();
+        }
     }
 }
