@@ -13,7 +13,7 @@ namespace National_Park_Blog.Models
         public int Id { get; set; }
         [Required]
         public string BlogContentText { get; set; }
-        public int BlogContentDate { get; set; }
+        public DateTime BlogContentDate { get; set; }
 
         public int NationalParkId {get; set;}
         public virtual National_Parks NationalPark { get; set; }
