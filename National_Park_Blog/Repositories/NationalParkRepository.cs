@@ -29,7 +29,11 @@ namespace National_Park_Blog.Repositories
         }
         public National_Parks GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.NationalParks.Single(c => c.Id == id);
+        }
+        public int Count()
+        {
+            return db.NationalParks.Count();
         }
         public void Update(Blog_Content review)
         {
