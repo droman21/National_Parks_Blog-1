@@ -37,9 +37,9 @@ namespace National_Park_Blog.Repositories
                 db.BlogContent.Remove(blogContent);
                 db.SaveChanges();
             }
-            public void Update(Blog_Content blog_Content)
+            public void Update(Blog_Content blogContent)
             {
-                db.BlogContent.Update(blog_Content);
+                db.BlogContent.Update(blogContent);
                 db.SaveChanges();
             }
             

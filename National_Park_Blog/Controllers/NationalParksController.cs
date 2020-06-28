@@ -47,9 +47,17 @@ namespace National_Park_Blog.Controllers
             throw new NotImplementedException();
         }
 
-        public void Update(Blog_Content blog_Content)
+        public ActionResult Update(Blog_Content blog_Content)
         {
-            throw new NotImplementedException();
+            if (ModelState.IsValid)
+            {
+                blog_Content.BlogContentDate = DateTime.Now;
+                int nationalParkId = blog_Content.NationalParkId;
+                natRepo.Update(blog_Content);
+                return RedirectToAction("Details", "NationalParks", new { id = nationalParkId });
+
+            }
+            return View(blog_Content);
         }
     }
 }
