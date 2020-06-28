@@ -12,8 +12,9 @@
     <link href="~/CSS/IndexStyle.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="headerinfo"></div>
     <h1>Get Out There! - An Adventure Blog</h1>
-    <p>Checkout what makes America's National Parks great. Checkout the blogs below or add your own content.</p>
+    <p>Discover what makes America's National Parks great. Checkout the blogs below or add your own content.</p>
     <div id="Blog_Content_Section">
         @foreach (var nationalPark in Model)
         {
@@ -21,7 +22,7 @@
 
                 <h3><a href="/NationalParks/Details/@nationalPark.Id">@nationalPark.Name</a></h3>
                 <img src="@nationalPark.Image" alt="image# @nationalPark.Id" />
-                <p>National Park Location: @nationalPark.Location</p>
+                <p>Park Location: @nationalPark.Location</p>
                 <p>About this Park: @nationalPark.Description</p>
             </article>
         }

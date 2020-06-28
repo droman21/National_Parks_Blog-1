@@ -24,7 +24,7 @@
              @foreach (var blogContent in Model.BlogContent)
              {
                  <p>Blog Content: <span><a href="/Blog_Content_/Details/@blogContent.Id">@blogContent.BlogContentText</a></span></p>
-                 <p>Blog Content Name: <span>@blogContent.BlogContentName</span></p>
+                 <p>Author: <span>@blogContent.BlogContentName</span></p>
                  <p>Blog Date: <span>@blogContent.BlogContentDate</span></p>
                  <hr />
              }
