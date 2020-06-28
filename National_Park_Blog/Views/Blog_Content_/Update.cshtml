@@ -6,13 +6,13 @@
 
 <!DOCTYPE html>
 
-<html>
+
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Update</title>
     <link href="/CSS/FormsStyle.css" rel="stylesheet" />
 </head>
-<body>
+
 
     <div class="row">
         <div class="col-md-4">
@@ -40,8 +40,11 @@
                     <select asp-for="NationalParkId" class="form-control" asp-items="ViewBag.NationalParkId"></select>
                     <span asp-validation-for="NationalParkId" class="text-danger"></span>
                 </div>*@
+                <div class="form-group"
+                     <input type="hidden" asp-for="NationalParkId" />
+                </div>
                 <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <input type="submit" value="Update" class="btn btn-primary" />
                 </div>
                 <div>
                     <a href="/Blog_Content_/Details/@Model.Id"> Back to Blog Details</a>
@@ -49,7 +52,3 @@
             </form>
         </div>
     </div>
-
-
-</body>
-</html>

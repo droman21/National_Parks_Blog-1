@@ -78,13 +78,9 @@ namespace National_Park_Blog.Controllers
         [HttpPost]
         public ActionResult Delete(Blog_Content blog_Content)
         {
-            if (ModelState.IsValid)
-            {
                 int nationalParkId = blog_Content.NationalParkId;
                 blogContentRepo.Delete(blog_Content);
-                return RedirectToAction("Details", "NationalParks", new { id = blog_Content.NationalParkId });
-            }
-            return View(blog_Content);
+                return RedirectToAction("Details", "NationalParks", new { id = nationalParkId });
         }
     }
 }
