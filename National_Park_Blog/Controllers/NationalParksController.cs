@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using National_Park_Blog.Models;
 using National_Park_Blog.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace National_Park_Blog.Controllers
 {
@@ -40,6 +41,15 @@ namespace National_Park_Blog.Controllers
                 return RedirectToAction("Index");
             }
             return View(nationalPark);
+        }
+        public void Delete(Blog_Content blog_Content)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Blog_Content blog_Content)
+        {
+            throw new NotImplementedException();
         }
     }
 }
