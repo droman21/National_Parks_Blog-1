@@ -45,7 +45,7 @@ namespace National_Park_Blog.Controllers
             {
                 blog_Content.BlogContentDate = DateTime.Now;
                 blogContentRepo.Create(blog_Content);
-                return RedirectToAction("Details", "National_Parks", new { id = blog_Content.NationalParkId });
+                return RedirectToAction("Details", "NationalParks", new { id = blog_Content.NationalParkId });
             }
             return View(blog_Content);
         }
