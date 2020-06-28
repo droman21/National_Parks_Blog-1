@@ -36,7 +36,7 @@ namespace National_Park_Blog.Repositories
         {
             return db.NationalParks.Count();
         }
-        public void Update(Blog_Content blog_Content)
+        public void Update(Blog_Content blogContent)
         {
             throw new NotImplementedException();
         }
