@@ -12,23 +12,19 @@
     <link href="/CSS/DetailsStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Blog Entries</h1>
-
-    <div id="blogEntriesPage">
-
-        <h2>@Model.NationalParkId</h2>
-        <p>@Model.BlogContentName</p>
-        <p>@Model.BlogContentText</p>
-        <p>@Model.BlogContentDate</p>
-
-        <br />
-        <br />
-        <a href="/Blog_Content_/Update/@Model.NationalParkId">Edit Review</a>
-        <br />
-        <a href="/Blog_Content_/Delete/@Model.NationalParkId">Remove Review</a>
-        <br />
-        <a href="NationalPark/Details/@Model.NationalParkId">Return to the Main Listing</a>
-
+    <div class="FormsStyle">
+        <div>
+            <h1>Blog Entries</h1>
+            <h2>@Model.BlogContentName</h2>
+            <p>@Model.BlogContentText</p>
+            <p>@Model.BlogContentDate</p>
+            <br />
+            <a href="/Blog_Content_/Update/@Model.Id">Edit Review</a>
+            <br />
+            <a href="/Blog_Content_/Delete/@Model.Id">Remove Review</a>
+            <br />
+            <a href="/NationalParks/Index/">Return to All Blogs Page</a>
+        </div>
     </div>
 </body>
 </html>
