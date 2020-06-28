@@ -76,7 +76,7 @@ namespace National_Park_Blog.Controllers
 
                 blogContentRepo.Delete(blog_Content);
 
-                return RedirectToAction("Details", "National_Parks", new { id = Id });
+                return RedirectToAction("Details", "NationalParks", new { id = Id });
             }
             return View(blog_Content);
         }
