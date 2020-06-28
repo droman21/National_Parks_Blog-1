@@ -13,6 +13,6 @@ namespace National_Park_Blog.Repositories
         T GetById(int id);
         void Create(T obj);
         void Delete(Blog_Content blogContent);
-        void Update(Blog_Content review);
+        void Update(Blog_Content blogContent);
     }
 }

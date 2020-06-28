@@ -10,7 +10,7 @@ namespace National_Park_Blog.Repositories
 {
     public class BlogContentRepository : IRepository<Blog_Content>
     {
-            private readonly NationalParkContext db;
+            private NationalParkContext db;
             public BlogContentRepository(NationalParkContext db)
             {
                 this.db = db;
@@ -42,14 +42,7 @@ namespace National_Park_Blog.Repositories
                 db.BlogContent.Update(blog_Content);
                 db.SaveChanges();
             }
-            IEnumerable<Blog_Content> IRepository<Blog_Content>.GetAll()
-            {
-                throw new NotImplementedException();
-            }
-            Blog_Content IRepository<Blog_Content>.GetById(int id)
-            {
-                throw new NotImplementedException();
-            }
+            
     }
 }
 
