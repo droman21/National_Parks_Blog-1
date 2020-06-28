@@ -17,7 +17,7 @@ namespace National_Park_Blog.Repositories
             }
             public IEnumerable<Blog_Content> GetAll()
             {
-                return db.BlogContent;
+                return db.BlogContent.ToList();
             }
             public Blog_Content GetById(int id)
             {

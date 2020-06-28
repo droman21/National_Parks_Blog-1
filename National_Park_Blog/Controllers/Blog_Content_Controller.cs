@@ -44,6 +44,7 @@ namespace National_Park_Blog.Controllers
 
             return View(blog_Content);
         }
+
         [HttpGet]
         public ViewResult Update()
         {
