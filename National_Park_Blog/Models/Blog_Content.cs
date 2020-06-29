@@ -8,10 +8,10 @@ namespace National_Park_Blog.Models
 {
     public class Blog_Content
     {
-        [Required]
+        //[Required]
         public string BlogContentName { get; set; }
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public string BlogContentText { get; set; }
         public DateTime BlogContentDate { get; set; }
 

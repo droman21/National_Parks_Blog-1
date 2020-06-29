@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using National_Park_Blog.Models;
 using National_Park_Blog.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace National_Park_Blog.Controllers
 {
@@ -40,6 +41,23 @@ namespace National_Park_Blog.Controllers
                 return RedirectToAction("Index");
             }
             return View(nationalPark);
+        }
+        public void Delete(Blog_Content blog_Content)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult Update(Blog_Content blog_Content)
+        {
+            if (ModelState.IsValid)
+            {
+                blog_Content.BlogContentDate = DateTime.Now;
+                int nationalParkId = blog_Content.NationalParkId;
+                natRepo.Update(blog_Content);
+                return RedirectToAction("Details", "NationalParks", new { id = nationalParkId });
+
+            }
+            return View(blog_Content);
         }
     }
 }

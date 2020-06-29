@@ -35,10 +35,10 @@ namespace National_Park_Blog
 
             modelbuilder.Entity<Blog_Content>().HasData(
 
-            new Blog_Content("Ron", 1, "Not too far away, very relaxing, great park.", Convert.ToDateTime("06-18-2020"), 1),
+            new Blog_Content("Bob", 1, "Not too far away, very relaxing, great park.", Convert.ToDateTime("06-18-2020"), 1),
             new Blog_Content("Dan", 2, "Totally awesome, once in a lifetime experience", Convert.ToDateTime("06-18-2020"), 2),
             new Blog_Content("Chuck", 3, "Ran into many blockers during the trip, a bear raided my campsite", Convert.ToDateTime("06-18-2020"), 3),
-            new Blog_Content("Tom", 4, "I became one with Nature, 10/10 would recommend", Convert.ToDateTime("06-18-2020"), 4)
+            new Blog_Content("Dakota", 4, "I became one with Nature, 10/10 would recommend", Convert.ToDateTime("06-18-2020"), 4)
                );
 
 

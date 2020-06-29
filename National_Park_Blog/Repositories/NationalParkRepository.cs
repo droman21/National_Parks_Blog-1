@@ -15,9 +15,10 @@ namespace National_Park_Blog.Repositories
         {
             this.db = db;
         }
-        public void Create(National_Parks obj)
+        public void Create(National_Parks nationalpark)
         {
-            throw new NotImplementedException();
+            db.NationalParks.Add(nationalpark);
+            db.SaveChanges();
         }
         public void Delete(Blog_Content blogContent)
         {
@@ -35,7 +36,7 @@ namespace National_Park_Blog.Repositories
         {
             return db.NationalParks.Count();
         }
-        public void Update(Blog_Content review)
+        public void Update(Blog_Content blogContent)
         {
             throw new NotImplementedException();
         }
