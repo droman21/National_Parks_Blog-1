@@ -17,6 +17,11 @@ namespace National_Park_Blog.Controllers
         {
             this.natRepo = natRepo;
         }
+
+        public NationalParksController()
+        {
+        }
+
         public ViewResult Index()
         {
             var model = natRepo.GetAll();

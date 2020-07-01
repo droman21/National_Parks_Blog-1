@@ -31,10 +31,10 @@ namespace National_Park_Blog.Tests
             Assert.Equal(currCount + 1, count);
         }
         [Fact]
-        public void Count_Starts_At_Three()
+        public void Count_Starts_At_Four()
         {
             var count = underTest.Count();
-            Assert.Equal(3, count);
+            Assert.Equal(4, count);
         }
     }
 }

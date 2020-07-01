@@ -9,23 +9,28 @@ namespace National_Park_Blog.Tests
 {
     public class ControllerTests
     {
-        ControllerTests underTest;
+        private NationalParksController underTest;
         public ControllerTests()
         {
-            //underTest = new NationalParksController();
+            underTest = new NationalParksController();
         }
         [Fact]
-        public void Index_Returns_ViewResult()
+        public void Index_Returns_View()
         {
-            //var result = underTest.Index();
-            //Assert.IsType <ViewResult>(result);
+            var result = underTest.Index();
+            Assert.IsType<ViewResult>(result);
         }
+
+        //private object Index()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         [Fact]
-        public void Index_Passes_National_Parks_Model_Is_view()
+        public void Index_Passes_National_Parks_Model_to_view()
         {
-            //var underTest = new NationalParksController();
-            //var result = underTest.Index();
-            //Assert.IsType <National_Park_Blog.Models.National_Parks>(result.Model);
+            var result = underTest.Index();
+            Assert.IsType <List<National_Parks>>(result.Model);
         }
     }
 }
