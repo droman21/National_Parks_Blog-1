@@ -56,6 +56,12 @@ namespace National_Park_Blog.Controllers
             Blog_Content blogContent = blogContentRepo.GetById(id);
             return View(blogContent);
         }
+
+        public object Count()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Update(Blog_Content blog_Content)
         {
