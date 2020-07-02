@@ -17,11 +17,9 @@ namespace National_Park_Blog.Controllers
         {
             this.natRepo = natRepo;
         }
-
         public NationalParksController()
         {
         }
-
         public ViewResult Index()
         {
             var model = natRepo.GetAll();
@@ -51,7 +49,6 @@ namespace National_Park_Blog.Controllers
         {
             throw new NotImplementedException();
         }
-
         public ActionResult Update(Blog_Content blog_Content)
         {
             if (ModelState.IsValid)

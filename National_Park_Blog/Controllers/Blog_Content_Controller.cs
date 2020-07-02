@@ -56,19 +56,16 @@ namespace National_Park_Blog.Controllers
             Blog_Content blogContent = blogContentRepo.GetById(id);
             return View(blogContent);
         }
-
         public object Count()
         {
             return View();
         }
-
         [HttpPost]
         public ActionResult Update(Blog_Content blog_Content)
         {
             if (ModelState.IsValid)
             {
                 blog_Content.BlogContentDate = DateTime.Now;
-                //int nationalParkId = blog_Content.NationalParkId;
                 blogContentRepo.Update(blog_Content);
                 return RedirectToAction("Details", "NationalParks", new { id = blog_Content.NationalParkId });
 
