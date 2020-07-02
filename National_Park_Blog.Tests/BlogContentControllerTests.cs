@@ -46,36 +46,15 @@ namespace National_Park_Blog.Tests
             var result = underTest.Create();
             Assert.IsType<ViewResult>(result);
         }
-        //[Fact]
-        //public void Delete_Reduces_Count()
-        //{
-        //    var blogContent = new Blog_Content() { BlogContentName = "Yellowstone" };
-        //    underTest.Create(blogContent);
+        [Fact]
+        public void Delete_Removes_Content()
+        {
+            var blogContent = new Blog_Content() { BlogContentName = "New Post" };
+            underTest.Create(blogContent);
 
-        //    underTest.Delete(blogContent);
-        //    var result = underTest.Count();
-
-        //    Assert.Equal(1, result);
-        //}
-        //[Fact]
-        //public void Delete_Decreases_Count()
-        //{
-        //    var db = new NationalParkContext();
-        //    var underTest = new BlogContentRepository(db);
-
-        //    underTest.Delete(new Blog_Content() { BlogContentName = "Yellowstone" });
-
-        //    var count = underTest.Count();
-        //    Assert.Equal(1, count);
-        //}
-        //[Fact]
-        //public void Delete_Decreases_Count_By_1()
-        //{
-        //    var currCount = underTest.Count();
-        //    underTest.Create(new Blog_Content() { BlogContentName = "Yellowstone" });
-        //    var count = underTest.Count();
-        //    Assert.Equal(currCount =- 1, count);
-        //}
+            underTest.Delete(blogContent);
+            blogRepo.Received().Delete(blogContent);
+        }
 
 
     }
