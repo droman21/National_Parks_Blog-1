@@ -10,7 +10,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>CreateByNationalParkID</title>
-    <link href="~/CSS/FormsStyle.css" rel="stylesheet" />
+    <link href="/CSS/DetailsStyle.css" rel="stylesheet" />
+    <link href="/CSS/FormsStyle.css" rel="stylesheet" />
 </head>
 <body>
 <h1>Create New Blog Content</h1>
@@ -22,20 +23,28 @@
         <form asp-action="Create" class="FormsStyle">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="BlogContentName" class="control-label"></label>
+                <label>Title: </label>
                 <input asp-for="BlogContentName" class="form-control" />
                 <span asp-validation-for="BlogContentName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="BlogContentText" class="control-label"></label>
+                <label>Content: </label>
                 <input asp-for="BlogContentText" class="form-control" />
                 <span asp-validation-for="BlogContentText" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input asp-for="NationalParkId" class ="form-control" value="@ViewBag.NationalParkId" type="hidden"/>
+                <input asp-for="NationalParkId" class="form-control" value="@ViewBag.NationalParkId" type="hidden" />
+            </div>
+            <div class="rating">
+                <label>Review Rating: </label>
+                <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
+                <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
+                <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
+                <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
+                <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input id="createButton" type="submit" value="Create" class="btn btn-primary" />
             </div>
             <div class="FormGroup">
                 <a href="/NationalParks/Details/@ViewBag.NationalParkId">Return to Park Page</a>

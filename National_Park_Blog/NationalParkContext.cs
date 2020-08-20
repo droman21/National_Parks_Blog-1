@@ -26,7 +26,7 @@ namespace National_Park_Blog
         {
             modelbuilder.Entity<National_Parks>().HasData(
      
-            new National_Parks("Black River Reservation", 1, "Impressive park, a natural beauty","Black_River_Reservation.jpg", "Ohio"),
+            new National_Parks("Black River Reservation", 1, "Impressive park, a natural beauty", "Black_River_Reservation.jpg", "Ohio"),
             new National_Parks("Gallatin National Park", 2, "Gateway to Yellowstone National Park","Gallatin_Sign.jpg", "Montana"),
             new National_Parks("Glacier National Park", 3, "The Crown of the Continent","Glacier_Park_Sign.jpg", "Montana"),
             new National_Parks("Rocky River Reservation", 4, "Totally Safe","Rocky_River_Park.jpg", "Ohio")

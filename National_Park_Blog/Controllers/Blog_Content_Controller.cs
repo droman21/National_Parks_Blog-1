@@ -7,8 +7,7 @@ using National_Park_Blog.Models;
 using National_Park_Blog.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace National_Park_Blog.Controllers
-{
+
     public class Blog_Content_Controller : Controller
     {
         readonly IRepository<Blog_Content> blogContentRepo;
@@ -86,4 +85,4 @@ namespace National_Park_Blog.Controllers
                 return RedirectToAction("Details", "NationalParks", new { id = nationalParkId });
         }
     }
-}
+

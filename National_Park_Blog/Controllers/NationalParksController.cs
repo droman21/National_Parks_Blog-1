@@ -17,9 +17,6 @@ namespace National_Park_Blog.Controllers
         {
             this.natRepo = natRepo;
         }
-        public NationalParksController()
-        {
-        }
         public ViewResult Index()
         {
             var model = natRepo.GetAll();
@@ -36,7 +33,7 @@ namespace National_Park_Blog.Controllers
             return View();
         }
         [HttpPost]
-        public Microsoft.AspNetCore.Mvc.ActionResult Create(National_Parks nationalPark)
+        public ActionResult Create(National_Parks nationalPark)
         {
             if (ModelState.IsValid)
             {
