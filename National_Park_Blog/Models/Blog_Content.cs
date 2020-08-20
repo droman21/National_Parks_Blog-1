@@ -11,6 +11,7 @@ namespace National_Park_Blog.Models
         public string BlogContentName { get; set; }
         public int Id { get; set; }
         public string BlogContentText { get; set; }
+        public string BlogAuthor { get; set; }
         public DateTime BlogContentDate { get; set; }
 
         public int NationalParkId {get; set;}
@@ -20,9 +21,10 @@ namespace National_Park_Blog.Models
         {
 
         }
-        public Blog_Content(string blogContentName, int blogContentId, string blogContentText, DateTime blogContentDate, int nationalParkId)
+        public Blog_Content(string blogContentName, string blogAuthor, int blogContentId, string blogContentText, DateTime blogContentDate, int nationalParkId)
         {
             BlogContentName = blogContentName;
+            BlogAuthor = blogAuthor;
             Id = blogContentId;
             BlogContentText = blogContentText;
             BlogContentDate = blogContentDate;

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using National_Park_Blog;
 
 namespace National_Park_Blog.Migrations
 {
     [DbContext(typeof(NationalParkContext))]
-    partial class NationalParkContextModelSnapshot : ModelSnapshot
+    [Migration("20200820182825_AuthorSeedData")]
+    partial class AuthorSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
