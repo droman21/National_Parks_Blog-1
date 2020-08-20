@@ -39,6 +39,18 @@
     font-weight: bold;
 }
 
+#updateButton {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+#updateButton:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
 .delete {
     color: red;
 }
