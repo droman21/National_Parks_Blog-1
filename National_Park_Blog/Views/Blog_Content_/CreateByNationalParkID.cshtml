@@ -23,20 +23,20 @@
         <form asp-action="Create" class="FormsStyle">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label>Title: </label>
+                <label>Title: </label><br>
                 <input asp-for="BlogContentName" class="form-control" />
                 <span asp-validation-for="BlogContentName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Content: </label>
-                <input asp-for="BlogContentText" class="form-control" />
+                <label>Content: </label><br>
+                <textarea rows="2" asp-for="BlogContentText" class="form-control"></textarea>
                 <span asp-validation-for="BlogContentText" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input asp-for="NationalParkId" class="form-control" value="@ViewBag.NationalParkId" type="hidden" />
             </div>
             <div class="rating">
-                <label>Review Rating: </label>
+                <label>Review Rating: </label><br>
                 <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
                 <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
                 <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
